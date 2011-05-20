@@ -1,0 +1,13 @@
+Folgende Commands sollen funktionieren:
+/orchester create <name> - Erstellt ein neues Orchester mit dem Namen
+/orchester list - Zeigt die Orchester die vorhanden sind
+/orchester add instrument <orchester> <type> - fügt das ausgewählte Instrument dem Orchester hinzu
+/orchester remove instrument - entfernt das ausgewählte Instrument aus dem Orchester
+/orchester alternative instrument <orchester> <type> - spielt Noten des Types auf dem anderen Instrument ab
+
+/song create <name> - Neues Lied erstellen
+/song takt <song> <takt> - Takt des Liedes einstellen
+/song add songnote <song> <zeit> <instrument> <tonhöhe> - Ton hinzufügen
+/song remove songnote <song> <zeit> <instrument> - Ton entfernen
+
+/orchester play <orchester> <song> - Lied abspielen

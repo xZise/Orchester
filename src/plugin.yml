@@ -1,0 +1,11 @@
+name: Orchester
+version: 0.001
+main: MyOrchester.java
+description: Spielt Musik in Orchestern!
+authors:
+  - 'DuKeTHeReaL'
+commands:
+  orchester:
+    description: Orchester commands
+    usage: /<command> help - Zeigt die Hilfe für Orchester
+    aliases: []
