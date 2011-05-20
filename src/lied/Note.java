@@ -1,6 +1,7 @@
 package lied;
 
 import instrumente.Instrument;
+import instrumente.Klavier;
 
 public class Note {
 	
@@ -8,6 +9,9 @@ public class Note {
 	private final Tonhöhe tonhöhe;
 	
 	public Note(Instrument instrument, Tonhöhe tonhöhe){
+		if(instrument == null){
+			instrument = new Klavier();
+		}
 		this.instrument = instrument;
 		this.tonhöhe = tonhöhe;
 	}
