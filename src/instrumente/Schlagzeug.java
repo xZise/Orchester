@@ -10,4 +10,12 @@ public class Schlagzeug implements Instrument {
 		
 	}
 
+    @Override
+    public Instruments getInstrument() {
+        //TODO There are no "Drums". Select one of those:
+//        return Instruments.BASS_DRUM;
+//        return Instruments.SNARE_DRUM;
+        return null;
+    }
+
 }

@@ -1,7 +1,6 @@
 package lied;
 
-import instrumente.Instrument;
-import instrumente.Klavier;
+import instrumente.Instruments;
 
 /**
  * Eine Note wird von einem Instrument gespielt und hat eine gewisse Tonhöhe
@@ -13,7 +12,7 @@ public class Note {
 	/**
 	 * Das Instrument welches den Ton abspielen soll
 	 */
-	private final Instrument instrument;
+	private final Instruments instrument;
 	/**
 	 * Die Tonhöhe in welcher gespielt werden soll
 	 */
@@ -24,10 +23,7 @@ public class Note {
 	 * @param instrument Das Instrument welches den Ton abspielen soll
 	 * @param tonhöhe Die Tonhöhe in welcher gespielt werden soll
 	 */
-	public Note(Instrument instrument, Tonhöhe tonhöhe){
-		if(instrument == null){
-			instrument = new Klavier();
-		}
+	public Note(Instruments instrument, Tonhöhe tonhöhe){
 		this.instrument = instrument;
 		this.tonhöhe = tonhöhe;
 	}
@@ -36,7 +32,7 @@ public class Note {
 	 * Welches Instrument spielt diesen Ton?
 	 * @return Das Instrument welches den Ton abspielen soll
 	 */
-	public Instrument holeInstrument() {
+	public Instruments holeInstrument() {
 		return instrument;
 	}
 

@@ -1,12 +1,14 @@
 package orchester;
 
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.LinkedList;
+import java.util.Map;
 
 import lied.Lied;
 import lied.Note;
 import lied.Taktzeit;
 import instrumente.Instrument;
+import instrumente.Instruments;
 
 /**
  * Ein Orchester beinhaltet mehrere Instrumente und kann Lieder spielen
@@ -18,14 +20,14 @@ public class Orchester {
 	/**
 	 * Die Instrumente spielen die Töne der Class der sie zugeordnet sind
 	 */
-	private HashMap<Class, Instrument> instrumente;
+	private Map<Instruments, Instrument> instrumente;
 
 	/**
 	 * Der Konstruktor initialisiert ein Orchester
 	 */
 	public Orchester() {
 		//instrumente = new LinkedList<Instrument>();
-		instrumente = new HashMap<Class, Instrument>();
+		instrumente = new EnumMap<Instruments, Instrument>(Instruments.class);
 	}
 
 	/**
@@ -34,7 +36,7 @@ public class Orchester {
 	 */
 	public void hinzufügenInstrument(Instrument instrument) {
 		//instrumente.add(instrument);
-		instrumente.put(instrument.getClass(), instrument);
+		instrumente.put(instrument.getInstrument(), instrument);
 	}
 
 	/**
@@ -51,7 +53,7 @@ public class Orchester {
 			LinkedList<Note> abzuspielendeNoten = lied.holeNote(abspielZeit);
 
 			for (Note note : abzuspielendeNoten) {
-				instrumente.get(abzuspielendeNoten.getClass()).spieleNote(note);
+				instrumente.get(note.holeInstrument()).spieleNote(note);
 			}
 
 			abspielZeit.weiter(lied.holeTakt().weiter());
@@ -66,7 +68,7 @@ public class Orchester {
 	 */
 	public void setzeAlternativeInstrument(Instrument orginal,
 			Instrument alternative) {
-		instrumente.put(orginal.getClass(), alternative);
+		instrumente.put(orginal.getInstrument(), alternative);
 
 	}
 

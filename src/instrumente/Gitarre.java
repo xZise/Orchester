@@ -10,4 +10,9 @@ public class Gitarre implements Instrument {
 		
 	}
 
+    @Override
+    public Instruments getInstrument() {
+        return Instruments.BASS_GUITAR;
+    }
+
 }

@@ -10,4 +10,10 @@ public class Trompete implements Instrument {
 		
 	}
 
+    @Override
+    public Instruments getInstrument() {
+        //TODO: There is no trumpet possible!
+        return null;
+    }
+
 }

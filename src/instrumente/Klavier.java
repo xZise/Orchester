@@ -10,4 +10,9 @@ public class Klavier implements Instrument {
 		
 	}
 
+    @Override
+    public Instruments getInstrument() {
+        return Instruments.PIANO;
+    }
+
 }

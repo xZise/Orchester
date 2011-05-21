@@ -16,5 +16,6 @@ public interface Instrument {
 	 */
 	void spieleNote(Note note);
 
+	Instruments getInstrument();
 	
 }
